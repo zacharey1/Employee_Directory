@@ -17,7 +17,6 @@ fetch(urlAPI)
 function displayEmployees(employeeData) {
     employees = employeeData;
 
-    // store the employee HTML as we create it
     let employeeHTML = '';
 
     // loop through each employee and create HTML markup
@@ -27,7 +26,6 @@ function displayEmployees(employeeData) {
         let city = employee.location.city;
         let picture = employee.picture;
 
-         // template literals make this so much cleaner!
         employeeHTML += `
             <div class="card" data-index="${index}">
                 <img class="avatar" src="${picture.large}" />
@@ -69,7 +67,6 @@ function displayModal(index) {
 
 gridContainer.addEventListener('click', e => {
 
-    // make sure the click is not on the gridContainer itself
     if (e.target !== gridContainer) {
 
         // select the card element based on its proximity to actual element clicked
