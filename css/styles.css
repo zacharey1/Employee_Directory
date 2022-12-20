@@ -1,11 +1,43 @@
 body {
-    /* position: relative; */
+    margin: 0 auto;
+}
+
+body > * {
+    width: 90%;
     margin: 0 auto;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+}
+
+.card {
+    border: solid 2px black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 310px;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 90px;
+    margin: 0 15px;
+    padding: 20px 0;
+}
+
+.name {
+    font-size: 18px;
+}
+
+.text-container:nth-child(1),
+.text-container:nth-child(2),
+.text-container:nth-child(3) {
+    margin: 5px 0;
 }
 
 .overlay {
