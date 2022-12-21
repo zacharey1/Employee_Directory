@@ -58,11 +58,24 @@ function displayModal(index) {
             <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
             <p>Birthday:
             ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+            <button class="left-button"><</button>
+            <button class="right-button">></button>
         </div>
     `;
 
     overlay.classList.remove("hidden");
     modalContainer.innerHTML = modalHTML;
+
+    const leftButton = document.querySelector(".left-button");
+    const rightButton = document.querySelector(".right-button");
+
+    leftButton.addEventListener('click', () => {
+        employees[index] = employees[index] - 1;
+    });
+
+    rightButton.addEventListener('click', () => {
+        employees[index] += 1;
+    });
 }
 
 gridContainer.addEventListener('click', e => {

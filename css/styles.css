@@ -34,9 +34,7 @@ body > * {
     font-size: 18px;
 }
 
-.text-container:nth-of-type(1),
-.text-container:nth-of-type(2),
-.text-container:nth-of-type(3) {
+.text-container :nth-child(-n+3) {
     margin: 5px 0;
 }
 
