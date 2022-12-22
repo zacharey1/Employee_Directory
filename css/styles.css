@@ -7,6 +7,18 @@ body > * {
     margin: 0 auto;
 }
 
+h1 {
+    font: 700 16px 'Poppins', sans-serif;
+}
+
+h2 {
+    font: 500 16px 'Poppins', sans-serif;
+}
+
+p {
+    font: 400 16px 'Barlow Semi Condensed', sans-serif;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -15,11 +27,16 @@ body > * {
 }
 
 .card {
-    border: solid 2px black;
+    border: solid 2px #ccc;
     border-radius: 5px;
     display: flex;
     align-items: center;
     min-width: 320px;
+}
+
+.card:hover {
+    border: none;
+    box-shadow: 0 0 15px #d1d1e0;
 }
 
 .avatar {
@@ -73,6 +90,10 @@ body > * {
 
 @media (min-width: 720px) {
 
+    h1 {
+        font: 700 30px 'Poppins', sans-serif;
+    }
+
     .grid-container {
         grid-template-columns: repeat(2, minmax(200px, 1fr));
     }
@@ -80,6 +101,10 @@ body > * {
 
 @media (min-width: 1028px) {
     
+    h1 {
+        font: 700 40px 'Poppins', sans-serif;
+    }
+
     .grid-container {
         grid-template-columns: repeat(3, minmax(200px, 1fr));
     }
