@@ -70,14 +70,14 @@ function displayModal(index) {
     const rightButton = document.querySelector(".right-button");
 
     leftButton.addEventListener('click', () => {
-        if (index !== 0) {
+        if (index > 0) {
             index -= 1;
             displayModal(index);
         }
     });
 
     rightButton.addEventListener('click', () => {
-        if (index !== 11) {
+        if (index < 11) {
             index += 1;
             displayModal(index);
         }
