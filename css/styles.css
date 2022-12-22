@@ -18,20 +18,22 @@ body > * {
     border: solid 2px black;
     border-radius: 5px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    min-width: 310px;
+    min-width: 320px;
 }
 
 .avatar {
     border-radius: 50%;
-    height: 90px;
-    margin: 0 15px;
-    padding: 20px 0;
+    height: 80px;
+    padding: 20px 15px;
 }
 
 .name {
     font-size: 18px;
+}
+
+.text-container {
+    margin: 0 auto;
 }
 
 .text-container :nth-child(-n+3) {
