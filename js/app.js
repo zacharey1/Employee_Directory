@@ -70,13 +70,17 @@ function displayModal(index) {
     const rightButton = document.querySelector(".right-button");
 
     leftButton.addEventListener('click', () => {
-        employees[index] -= 1;
-        displayModal();
+        if (index !== 0) {
+            index -= 1;
+            displayModal(index);
+        }
     });
 
     rightButton.addEventListener('click', () => {
-        employees[index] += 1;
-        displayModal();
+        if (index !== 11) {
+            index += 1;
+            displayModal(index);
+        }
     });
 }
 
