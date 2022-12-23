@@ -58,8 +58,12 @@ function displayModal(index) {
             <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
             <p>Birthday:
             ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
-            <button class="left-button"><</button>
-            <button class="right-button">></button>
+            <button class="left-button">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <button class="right-button">
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
         </div>
     `;
 
@@ -92,7 +96,7 @@ gridContainer.addEventListener('click', e => {
         const card = e.target.closest(".card");
         const index = card.getAttribute('data-index');
 
-        displayModal(index);
+        displayModal(parseInt(index));
     }
 });
 
