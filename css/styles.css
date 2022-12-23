@@ -9,6 +9,7 @@ body > * {
 
 h1 {
     font: 700 16px 'Poppins', sans-serif;
+    margin: 15px 0 5px;
 }
 
 h2 {
@@ -18,6 +19,16 @@ h2 {
 p {
     font: 400 16px 'Barlow Semi Condensed', sans-serif;
 }
+
+.name-search {
+    margin-bottom: 20px;
+    width: 250px;
+    font: 500 16px 'Poppins', sans-serif;
+}
+
+.name-search:focus::placeholder {
+    color: transparent;
+  }
 
 .grid-container {
     display: grid;
@@ -42,8 +53,12 @@ p {
 
 .avatar {
     border-radius: 50%;
-    height: 80px;
+    height: 70px;
     padding: 20px 15px;
+}
+
+.modal-content .avatar {
+    height: 90px;
 }
 
 .name {
