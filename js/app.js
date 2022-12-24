@@ -76,7 +76,7 @@ function displayModal(index) {
         index -= 1; 
         if (index >= 0) {
             displayModal(parseInt(index));
-        } else {
+        } else if (index === 0) {
             leftButton.style.display = 'none';
         }
     });
