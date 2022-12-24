@@ -43,8 +43,7 @@ function displayEmployees(employeeData) {
 
 function displayModal(index) {
 
-    let { name, dob, phone, email, location: { city, street, state, postcode
-    }, picture } = employees[index];
+    let { name, dob, phone, email, location: { city, street, state, postcode }, picture } = employees[index];
 
     let date = new Date(dob.date);
 
@@ -57,7 +56,7 @@ function displayModal(index) {
             <hr>
             <p>${phone}</p>
             <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
-            <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+            <p>Birthday: ${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}</p>
             <button class="left-button">
                 <span class="material-symbols-outlined">arrow_back</span>
             </button>
@@ -74,9 +73,9 @@ function displayModal(index) {
     const rightButton = document.querySelector(".right-button");
 
     leftButton.addEventListener('click', () => {
-        if (index > 0) {
-            index -= 1;
-            displayModal(index);
+        index -= 1; 
+        if (index >= 0) {
+            displayModal(parseInt(index));
         } else {
             leftButton.style.display = 'none';
         }
@@ -85,7 +84,7 @@ function displayModal(index) {
     rightButton.addEventListener('click', () => {
         if (index < 11) {
             index += 1;
-            displayModal(index);
+            displayModal(parseInt(index));
         } else {
             rightButton.style.display = 'none';
         }
@@ -100,7 +99,7 @@ gridContainer.addEventListener('click', e => {
         const card = e.target.closest(".card");
         const index = card.getAttribute('data-index');
 
-        displayModal(parseInt(index));
+        displayModal(index);
     }
 });
 
