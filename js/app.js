@@ -57,8 +57,7 @@ function displayModal(index) {
             <hr>
             <p>${phone}</p>
             <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
-            <p>Birthday:
-            ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+            <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
             <button class="left-button">
                 <span class="material-symbols-outlined">arrow_back</span>
             </button>
@@ -78,6 +77,8 @@ function displayModal(index) {
         if (index > 0) {
             index -= 1;
             displayModal(index);
+        } else {
+            leftButton.style.display = 'none';
         }
     });
 
@@ -85,6 +86,8 @@ function displayModal(index) {
         if (index < 11) {
             index += 1;
             displayModal(index);
+        } else {
+            rightButton.style.display = 'none';
         }
     });
 }
