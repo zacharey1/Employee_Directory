@@ -72,23 +72,31 @@ function displayModal(index) {
     const leftButton = document.querySelector(".left-button");
     const rightButton = document.querySelector(".right-button");
 
+    if (index === 0) {
+        leftButton.style.display = 'none';
+    }
+
+    if (index === 11) {
+        rightButton.style.display = 'none';
+    }
+
     leftButton.addEventListener('click', () => {
-        index -= 1; 
-        if (index >= 0) {
+        if (index > 0) {
+            index -= 1;
             displayModal(parseInt(index));
-        } else if (index === 0) {
-            leftButton.style.display = 'none';
         }
+        
     });
 
     rightButton.addEventListener('click', () => {
         if (index < 11) {
             index += 1;
             displayModal(parseInt(index));
-        } else {
-            rightButton.style.display = 'none';
         }
+
     });
+
+    
 }
 
 gridContainer.addEventListener('click', e => {
